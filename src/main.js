@@ -7,6 +7,7 @@ import routeConfig from 'URL_config/router';
 
 // 引入样式
 import 'URL_style/all.less';
+import 'URL_style/common/reset.less';
 // 引入Router
 Vue.use(VueRouter);
 
