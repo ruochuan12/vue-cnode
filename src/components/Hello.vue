@@ -21,12 +21,23 @@
 </template>
 
 <script>
+import serviceTest from 'URL_service/test';
 export default {
     name: 'hello',
     data () {
         return {
             msg: 'Welcome to Your Vue.js App'
         };
+    },
+    created () {
+        serviceTest.list().then((response) => {
+            // response = response.body;
+            console.log(response, response.isError);
+            console.log(response.data);
+            // if (response.errorCode === 0) {
+            //     console.log(response.body);
+            // }
+        });
     }
 };
 </script>
