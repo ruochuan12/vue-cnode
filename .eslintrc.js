@@ -28,6 +28,7 @@ module.exports = {
     "no-fallthrough": 0,    // case贯穿
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     "indent": [2, 4, { "SwitchCase": 1 }],   // switch case 缩进
-    'semi': [2, "always"]
+    'semi': [2, "always"],
+    'eol-last': 0 // 文件末尾需要空一行（去除这个校验）
   }
 }
