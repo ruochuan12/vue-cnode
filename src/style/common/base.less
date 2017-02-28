@@ -1,0 +1,103 @@
+/* wrap-layout */
+
+.wrap-layout-aside {
+  width: 160px;
+  background: #FF4A79;
+  position: absolute;
+  overflow: auto;
+  padding-bottom: 24px;
+  height: 100%;
+  .mod-logo {
+    padding: 36px 20px;
+    img {
+      width: 120px;
+    }
+  }
+}
+
+.wrap-layout-main {
+  display: box;
+  display: -webkit-box;
+  box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: vertical;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 160px;
+  right: 0;
+  background: #fff;
+  .wrap-layout-header{
+    position: relative;
+    z-index: 2;
+    height: 50px;
+    padding: 0 20px 0;
+    text-align: right;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14);
+    .shop-img{
+      display: inline-block;
+      margin-top: 12px;
+      width: 26px;
+      height: 26px;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+    .shop-name {
+      font-size: 14px;
+      line-height: 50px;
+      padding: 0 10px 0 0;
+      color: #464646;
+    }
+    .btn-quit{
+      font-size: 14px;
+      line-height: 50px;
+      padding: 0 10px;
+      color: @color-font-bule;
+      &:hover{
+        color: @color-primary;
+      }
+    }
+  }
+  .wrap-layout-container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow: auto;
+    position: relative;
+  }
+  .wrap-layout-footer p {
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    background: #fff;
+    border-top: 1px solid #e9e9e9;
+  }
+  .wrap-slot {
+    display: box;
+    display: -webkit-box;
+    box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: vertical;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    main {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      overflow-y: scroll;
+      position: relative;
+    }
+    footer {
+      position: relative;
+      z-index: 2;
+      background: #FFFFFF;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14);
+    }
+  }
+}

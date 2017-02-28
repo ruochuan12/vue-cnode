@@ -10,11 +10,30 @@
 // Vue.use(Router);
 
 export default [
-    {
-        path: '/',
-        name: 'Hello',
+    // {
+    //     path: '/',
+    //     name: 'Hello',
+    //     component: (resolve) => {
+    //         require(['URL_components/Hello.vue'], resolve);
+    //     }
+    // },
+    {   // 登录
+        path: '/login',
+        name: 'login',
         component: (resolve) => {
-            require(['URL_components/Hello.vue'], resolve);
+            require(['URL_views/login.vue'], resolve);
+        },
+        meta: {
+            title: '新浪分期-登录'
+        }
+    }, {   // 首页
+        path: '/',
+        name: 'index',
+        component: (resolve) => {
+            require(['URL_views/index.vue'], resolve);
+        },
+        meta: {
+            title: '新浪分期-首页'
         }
     }
 ];

@@ -34,7 +34,8 @@ module.exports = {
       'URL_lib':resolve('src/lib'),
       'URL_service':resolve('src/service'),
       'URL_store':resolve('src/store'),
-      'URL_style':resolve('src/style')
+      'URL_style':resolve('src/style'),
+      'URL_views':resolve('src/views')
     }
   },
   module: {
