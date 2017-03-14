@@ -1,0 +1,57 @@
+// @name: '后台登录'
+// @author: '轩辕Rowboat'
+// @time: '2017.02.28'
+
+.wrap-login {
+  position: relative;
+  height: 100%;
+  display: box;
+  display: -webkit-box;
+  box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  background: #fff;
+  .login-header{
+    height: 60px;
+    line-height: 60px;
+    .mod-logo{
+      font-size: 12px;
+      color: #666;
+      img{
+        margin: 0 20px 0 25px;
+        vertical-align: middle;
+      }
+    }
+    .mod-handle{
+      li{
+        float: left;
+        padding-right: 40px;
+      }
+      .link{
+        font-size: 14px;
+        &:hover{
+          opacity: .8;
+        }
+      }
+      .link-login{
+        color: @color-primary;
+      }
+      .link-register{
+        color: #666;
+      }
+    }
+  }
+  .login-container{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow: auto;
+  }
+  .login-footer{
+    border-top:1px solid #ccc;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+}

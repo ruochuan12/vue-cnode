@@ -1,8 +1,5 @@
 <template>
-  <div id="app">
-    <h2>vue init</h2>
-    <h3>vue-cnode</h3>
-    <img src="./assets/logo.png">
+  <div id="app" class="wrap-layout">
     <router-view></router-view>
   </div>
 </template>
@@ -20,15 +17,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
-body{
-  background: #eee;
-  h2{
-    // 这里的注释看不到
-    /* 这里的注释可以看到 */
-    font-size: 24px;
-    font-weight: normal;
-  }
 }
 </style>
