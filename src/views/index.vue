@@ -1,7 +1,7 @@
 <!--
  @name: '后台首页'
  @author: '轩辕Rowboat'
- @time: '2017.02.28'
+ @time: '2017-02-28'
  -->
 <template>
   <wrap-layout comp-class="wrap-index">

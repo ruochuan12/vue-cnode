@@ -6,12 +6,10 @@ import App from './App';
 import VueRouter from 'vue-router';
 
 import routeConfig from 'URL_config/router';
-// Vue.prototype.$http = Axios;
 
 // 引入样式
 import 'URL_style/all.less';
 import polyfill from 'URL_lib/polyfill';
-import resource from 'URL_lib/resource';     // resource-自定义配置
 // 引入Router
 Vue.use(VueRouter);
 Vue.use(ElementUI);
@@ -19,7 +17,12 @@ Vue.use(ElementUI);
 // 加载中间件
 // polyfill
 polyfill.init();
-resource.init(Vue);
+// axios配置
+import Axios from 'axios';
+import configAxios from 'URL_lib/config-axios';     // axios-自定义配置
+configAxios.init(Axios);
+// Vue实例上使用，this.$http
+Vue.prototype.$http = Axios;
 
 const router = new VueRouter({
     routes: routeConfig
@@ -34,7 +37,6 @@ const router = new VueRouter({
 // });
 const app = new Vue({
     router,
-    el: '#app',
     render: h => h(App)
 }).$mount('#app');
 

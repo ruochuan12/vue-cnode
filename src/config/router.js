@@ -1,7 +1,7 @@
 /**
   @name: '路由配置'
   @author: '轩辕Rowboat'
-  @time: '2017.02.24'
+  @time: '2017-02-24'
 */
 // import Vue from 'vue';
 // import Router from 'vue-router';
@@ -24,7 +24,7 @@ export default [
             require(['URL_views/login.vue'], resolve);
         },
         meta: {
-            title: '新浪分期-登录'
+            title: '登录'
         }
     }, {   // 首页
         path: '/',
@@ -33,7 +33,7 @@ export default [
             require(['URL_views/index.vue'], resolve);
         },
         meta: {
-            title: '新浪分期-首页'
+            title: '首页'
         }
     }
 ];

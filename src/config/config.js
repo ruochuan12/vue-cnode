@@ -1,7 +1,7 @@
 /**
     @name: '系统相关参数配置'
     @author: '轩辕Rowboat'
-    @time: '2017.02.28'
+    @time: '2017-02-28'
  */
 const domainConfig = {
     'lxchuan12.github.io': {
@@ -16,6 +16,6 @@ const domainConfig = {
 export default {
     // 商品列表
     goods: {
-        list: `${domainConfig.url}/api/goods`
+        list: `http://${window.location.host.toLowerCase()}/api/goods`
     }
 };
