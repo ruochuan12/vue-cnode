@@ -1,9 +1,9 @@
-import Vue from 'vue';
+import V from 'vue';
 // ElementUI 公共库引入
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-default/index.css';
 import App from './App';
-import VueRouter from 'vue-router';
+import R from 'vue-router';
 
 import routeConfig from 'URL_config/router';
 
@@ -11,8 +11,8 @@ import routeConfig from 'URL_config/router';
 import 'URL_style/all.less';
 import polyfill from 'URL_lib/polyfill';
 // 引入Router
-Vue.use(VueRouter);
-Vue.use(ElementUI);
+V.use(R);
+V.use(ElementUI);
 
 // 加载中间件
 // polyfill
@@ -22,9 +22,11 @@ import Axios from 'axios';
 import configAxios from 'URL_lib/config-axios';     // axios-自定义配置
 configAxios.init(Axios);
 // Vue实例上使用，this.$http
-Vue.prototype.$http = Axios;
+V.prototype.$http = Axios;
 
-const router = new VueRouter({
+console.log(V, 'vue', typeof V);
+console.log(R, 'vue-router', typeof R);
+const router = new R({
     routes: routeConfig
 });
 
@@ -35,7 +37,7 @@ const router = new VueRouter({
 //     template: '<App/>',
 //     components: { App }
 // });
-const app = new Vue({
+const app = new V({
     router,
     render: h => h(App)
 }).$mount('#app');
